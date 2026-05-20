@@ -24,7 +24,86 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-   
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ── A6 card ── */
+  .card {
+    width: 105mm;
+    height: 148mm;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10mm 9mm;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Outer frame */
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 4mm;
+    border: 0.4pt solid rgba(122,158,126,0.5);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Inner frame */
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 5.5mm;
+    border: 0.3pt solid rgba(122,158,126,0.2);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Background radial glow */
+  .bg-glow {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 70% at 50% 40%, rgba(122,158,126,0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 15% 15%, rgba(122,158,126,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 85% 85%, rgba(122,158,126,0.06) 0%, transparent 60%);
+    z-index: 0;
+  }
+
+  /* Corner ornaments */
+  .corner {
+    position: absolute;
+    width: 14mm;
+    height: 14mm;
+    z-index: 5;
+  }
+  .corner svg { width: 100%; height: 100%; }
+  .corner-tl { top: 6mm; left: 6mm; }
+  .corner-tr { top: 6mm; right: 6mm; transform: scaleX(-1); }
+  .corner-bl { bottom: 6mm; left: 6mm; transform: scaleY(-1); }
+  .corner-br { bottom: 6mm; right: 6mm; transform: scale(-1); }
+
+  /* Content wrapper */
+  .content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Pre-label */
+  .pre-label {
+    font-size: 5pt;
     letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--green);
@@ -307,7 +386,7 @@
 
     <div class="divider">
       <div class="line"></div>
-      <span class="leaf"></span>
+      <span class="leaf">❧</span>
       <div class="line r"></div>
     </div>
 
