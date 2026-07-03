@@ -19,34 +19,46 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            padding: 20px 10px;
             min-height: 100vh;
+        }
+
+        @media (min-width: 768px) {
+            body { padding: 40px 20px; }
         }
 
         .container {
             width: 100%;
             max-width: 650px;
             background: rgba(255, 255, 255, 0.95);
-            padding: 40px 35px;
+            padding: 30px 20px;
             border-radius: 24px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             text-align: center;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             transition: all 0.3s ease;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+        }
+
+        @media (min-width: 768px) {
+            .container { padding: 40px 35px; }
         }
 
         h1 {
-            font-size: 28px;
-            margin-bottom: 25px;
+            font-size: 24px;
+            margin-bottom: 20px;
             color: #1a365d;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
 
+        @media (min-width: 768px) {
+            h1 { font-size: 28px; margin-bottom: 25px; }
+        }
+
         h2 {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 15px;
             color: #2c3e50;
             font-weight: 600;
@@ -71,17 +83,8 @@
             color: #2d3748;
         }
 
-        input[type="text"] {
-            padding-right: 45px;
-        }
-
-        textarea {
-            height: 140px;
-            resize: vertical;
-            font-family: inherit;
-            line-height: 1.5;
-        }
-
+        input[type="text"] { padding-right: 45px; }
+        textarea { height: 140px; resize: vertical; font-family: inherit; line-height: 1.5; }
         input[type="text"]:focus, textarea:focus {
             border-color: #3182ce;
             background-color: #ffffff;
@@ -135,8 +138,8 @@
         }
 
         .result-card {
-            margin-top: 30px;
-            padding: 30px 20px;
+            margin-top: 25px;
+            padding: 25px 15px;
             border-radius: 16px;
             background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
             border: 1px solid #81e6d9;
@@ -146,35 +149,17 @@
         }
 
         .result-card h3 {
-            font-size: 22px;
+            font-size: 20px;
             color: #0b6353;
             font-weight: 700;
             margin-bottom: 8px;
         }
 
-        .result-card p {
-            font-size: 15px;
-            color: #1d4ed8;
-            font-weight: 500;
-        }
-
-        .table-number {
-            font-size: 64px;
-            font-weight: 800;
-            color: #2b6cb0;
-            margin-top: 10px;
-            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
-        }
+        .result-card p { font-size: 15px; color: #1d4ed8; font-weight: 500; }
+        .table-number { font-size: 58px; font-weight: 800; color: #2b6cb0; margin-top: 5px; }
 
         /* Админ Секција */
-        .admin-section {
-            width: 100%;
-            max-width: 650px;
-            margin-top: 40px;
-            border-top: 2px dashed #cbd5e0;
-            padding-top: 35px;
-        }
-
+        .admin-section { width: 100%; max-width: 650px; margin-top: 30px; }
         .instructions {
             font-size: 13px;
             color: #718096;
@@ -187,127 +172,161 @@
             border-left: 4px solid #718096;
         }
 
-        .btn-group {
-            display: flex;
-            gap: 12px;
-            margin-top: 8px;
-        }
-
-        button {
-            width: 100%;
-            padding: 16px 20px;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
+        .btn-group { display: flex; gap: 12px; margin-top: 8px; }
+        button { width: 100%; padding: 16px 20px; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
         button:active { transform: scale(0.98); }
         .btn-save { background-color: #38a169; flex: 2; }
         .btn-save:hover { background-color: #2f855a; }
         .btn-clear { background-color: #e53e3e; flex: 1; font-size: 14px; }
         .btn-clear:hover { background-color: #c53030; }
 
-        .alert {
-            margin-top: 15px;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            background-color: #c6f6d5;
-            color: #22543d;
-            display: none;
-            font-weight: 600;
-        }
+        .alert { margin-top: 15px; padding: 12px; border-radius: 8px; font-size: 14px; background-color: #c6f6d5; color: #22543d; display: none; font-weight: 600; }
         .alert-danger { background-color: #fed7d7; color: #742a2a; }
 
-        /* --- СТИЛИЗИРАЊЕ НА ПЛАНОТ НА САЛАТА (ШЕМА) --- */
+        /* --- НАПРЕДЕН И ЦЕЛОСНО RESPONSIVE ПЛАН НА САЛАТА --- */
         .map-section {
             width: 100%;
             max-width: 850px;
             background: #ffffff;
-            padding: 40px 20px;
+            padding: 30px 15px;
             border-radius: 24px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.08);
             border: 1px solid #e2e8f0;
         }
 
+        @media (min-width: 768px) { .map-section { padding: 40px 25px; } }
+
+        /* Мобилна легенда за блокови */
+        .map-legend {
+            display: block;
+            background: #f7fafc;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 1.6;
+            border: 1px dashed #cbd5e0;
+        }
+
+        @media (min-width: 768px) { .map-legend { display: none; } }
+
+        /* Главен контејнер на распоредот */
         .hall-layout {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            position: relative;
-            background-color: #fafafa;
-            border: 2px solid #cbd5e0;
-            border-radius: 16px;
-            padding: 25px 20px;
-            overflow-x: auto;
+            gap: 25px;
         }
 
+        /* На мобилен, редовите се кршат вертикално во убави независни секции */
         .hall-row {
             display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            min-width: 750px;
+            flex-direction: column;
+            gap: 20px;
         }
 
+        /* На компјутер (десктоп) се враќа оригиналниот Grandis изглед рамо до рамо */
+        @media (min-width: 768px) {
+            .hall-row {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 40px;
+            }
+        }
+
+        .block-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #a0aec0;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            text-align: left;
+            letter-spacing: 0.5px;
+        }
+        @media (min-width: 768px) { .block-title { display: none; } }
+
+        /* Решетка со маси (паметно распоредување) */
         .grid-block {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            gap: 12px;
+            background: #f8fafc;
+            padding: 12px;
+            border-radius: 16px;
+            border: 1px solid #edf2f7;
+        }
+        @media (min-width: 768px) {
+            .grid-block {
+                background: transparent;
+                padding: 0;
+                border: none;
+                gap: 15px;
+            }
         }
 
+        /* Средниот дел (Кумска, Лого, Бина) */
         .center-row {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            height: 140px;
-            min-width: 750px;
-            border-top: 1px dashed #e2e8f0;
-            border-bottom: 1px dashed #e2e8f0;
-            padding: 10px 0;
+            height: auto;
+            padding: 15px 5px;
+            border-top: 2px dashed #e2e8f0;
+            border-bottom: 2px dashed #e2e8f0;
+            background: #fffdf5;
+            border-radius: 12px;
+            gap: 10px;
+        }
+        @media (min-width: 768px) {
+            .center-row {
+                height: 140px;
+                background: transparent;
+                border-radius: 0;
+                padding: 10px 0;
+            }
         }
 
         .side-element {
-            width: 60px;
-            height: 110px;
+            padding: 12px 8px;
             background-color: #edf2f7;
             border: 2px solid #a0aec0;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            writing-mode: vertical-rl;
-            text-transform: uppercase;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             color: #4a5568;
-            letter-spacing: 1px;
-        }
-
-        .brand-center {
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 75px;
             text-align: center;
         }
-        .brand-logo {
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: 4px;
-            color: #1a365d;
-        }
-        .brand-sub {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: #718096;
-            margin-top: 5px;
-            letter-spacing: 2px;
-            font-weight: 600;
+        @media (min-width: 768px) {
+            .side-element {
+                width: 60px;
+                height: 110px;
+                writing-mode: vertical-rl;
+                font-size: 12px;
+                letter-spacing: 1px;
+                min-width: auto;
+            }
         }
 
-        /* Масите како кругови */
+        .brand-center { text-align: center; flex: 1; }
+        .brand-logo { font-size: 18px; font-weight: 700; letter-spacing: 2px; color: #1a365d; }
+        .brand-sub { font-size: 11px; text-transform: uppercase; color: #718096; margin-top: 3px; letter-spacing: 1px; font-weight: 600; }
+        
+        @media (min-width: 768px) {
+            .brand-logo { font-size: 22px; letter-spacing: 4px; }
+            .brand-sub { font-size: 14px; letter-spacing: 2px; }
+        }
+
+        /* Дизајн на Масите - КРУГОВИ (Психолошки прилагодени и поголеми за допир) */
         .table-circle {
-            width: 54px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -316,57 +335,63 @@
         }
 
         .circle-ui {
-            width: 52px;
-            height: 52px;
+            width: 54px;
+            height: 54px;
             border-radius: 50%;
             border: 2.5px solid #2d3748;
             background-color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: #2d3748;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
             transition: all 0.3s ease;
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            .circle-ui { width: 52px; height: 52px; font-size: 16px; }
         }
 
         .special-label {
-            font-size: 9px;
+            font-size: 8px;
             font-weight: 700;
             color: #718096;
             margin-top: 4px;
             text-align: center;
-            white-space: nowrap;
             text-transform: uppercase;
         }
 
-        .entrance-arrow {
+        .entrance-container {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            font-size: 11px;
-            font-weight: 700;
-            color: #4a5568;
+            padding: 10px 0;
+            background: #f7fafc;
+            border-radius: 12px;
         }
-        .arrow-icon {
-            font-size: 20px;
-            line-height: 1;
+        @media (min-width: 768px) {
+            .entrance-container { background: transparent; padding: 0; align-items: flex-end; padding-bottom: 20px; }
         }
 
-        /* Трепкање на селектирана маса */
+        .entrance-arrow { display: flex; flex-direction: column; align-items: center; font-size: 11px; font-weight: 700; color: #4a5568; }
+        .arrow-icon { font-size: 20px; line-height: 1; }
+
+        /* АНИМАЦИЈА И ЕФЕКТ НА СЕЛЕКТИРАНА МАСА ОД ПРЕБАРАУВАЧОТ */
         .table-circle.highlighted .circle-ui {
             background: #d69e2e;
             border-color: #b7791f;
             color: #ffffff;
-            transform: scale(1.15);
-            box-shadow: 0 0 15px rgba(214, 158, 46, 0.6);
+            transform: scale(1.22);
+            box-shadow: 0 0 18px rgba(214, 158, 46, 0.7);
             animation: pulse-gold 1.5s infinite ease-in-out;
+            z-index: 10;
         }
 
         @keyframes pulse-gold {
-            0% { box-shadow: 0 0 0 0 rgba(214, 158, 46, 0.7); }
-            70% { box-shadow: 0 0 0 12px rgba(214, 158, 46, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(214, 158, 46, 0.8); }
+            70% { box-shadow: 0 0 0 14px rgba(214, 158, 46, 0); }
             100% { box-shadow: 0 0 0 0 rgba(214, 158, 46, 0); }
         }
 
@@ -381,62 +406,76 @@
     <div class="container">
         <h1>Пронајди ја твојата маса</h1>
         <div class="search-box">
-            <input type="text" id="guestSearch" placeholder="Внеси име и презиме па стисни Enter..." autocomplete="off">
+            <input type="text" id="guestSearch" placeholder="Внеси име и презиме..." autocomplete="off">
             <button id="clearSearchX" class="clear-search-btn" onclick="resetSearchField()">&times;</button>
             <div id="suggestions" class="suggestions" style="display: none;"></div>
         </div>
 
         <div id="resultCard" class="result-card">
             <h3 id="guestNameResult"></h3>
-            <p>Ве очекуваме на masa број:</p>
+            <p>Ве очекуваме на маса број:</p>
             <div class="table-number" id="tableNumber">--</div>
         </div>
     </div>
 
     <div class="map-section">
-        <h2 style="text-align: center; margin-bottom: 25px; color: #1a365d;">Графички приказ на салата</h2>
+        <h2 style="text-align: center; margin-bottom: 15px; color: #1a365d;">Графички приказ на салата</h2>
+        
+        <div class="map-legend">
+            💡 <strong>Како е организиран приказот на мобилен:</strong><br>
+            • Прво се прикажани левите и десните маси од <strong>горниот дел</strong> (Маси 1-24).<br>
+            • Во средина е главната линија: Кумска маса, Свечен подиум и Бина.<br>
+            • Најдолу се левите и десните маси од <strong>долниот дел кај влезот</strong> (Маси 25-46).
+        </div>
+
         <div class="hall-layout">
             
             <div class="hall-row">
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-1"><div class="circle-ui">1</div></div>
-                        <div class="table-circle" id="map-table-2"><div class="circle-ui">2</div></div>
-                        <div class="table-circle" id="map-table-3"><div class="circle-ui">3</div></div>
-                        <div class="table-circle" id="map-table-4"><div class="circle-ui">4</div></div>
-                    </div>
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-9"><div class="circle-ui">9</div></div>
-                        <div class="table-circle" id="map-table-10"><div class="circle-ui">10</div></div>
-                        <div class="table-circle" id="map-table-11"><div class="circle-ui">11</div></div>
-                        <div class="table-circle" id="map-table-12"><div class="circle-ui">12</div></div>
-                    </div>
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-17"><div class="circle-ui">17</div></div>
-                        <div class="table-circle" id="map-table-18"><div class="circle-ui">18</div></div>
-                        <div class="table-circle" id="map-table-19"><div class="circle-ui">19</div></div>
-                        <div class="table-circle" id="map-table-20"><div class="circle-ui">20</div></div>
+                <div>
+                    <div class="block-title">Горна Лева Страна</div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-1"><div class="circle-ui">1</div></div>
+                            <div class="table-circle" id="map-table-2"><div class="circle-ui">2</div></div>
+                            <div class="table-circle" id="map-table-3"><div class="circle-ui">3</div></div>
+                            <div class="table-circle" id="map-table-4"><div class="circle-ui">4</div></div>
+                        </div>
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-9"><div class="circle-ui">9</div></div>
+                            <div class="table-circle" id="map-table-10"><div class="circle-ui">10</div></div>
+                            <div class="table-circle" id="map-table-11"><div class="circle-ui">11</div></div>
+                            <div class="table-circle" id="map-table-12"><div class="circle-ui">12</div></div>
+                        </div>
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-17"><div class="circle-ui">17</div></div>
+                            <div class="table-circle" id="map-table-18"><div class="circle-ui">18</div></div>
+                            <div class="table-circle" id="map-table-19"><div class="circle-ui">19</div></div>
+                            <div class="table-circle" id="map-table-20"><div class="circle-ui">20</div></div>
+                        </div>
                     </div>
                 </div>
 
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-5"><div class="circle-ui">5</div></div>
-                        <div class="table-circle" id="map-table-6"><div class="circle-ui">6</div></div>
-                        <div class="table-circle" id="map-table-7"><div class="circle-ui">7</div></div>
-                        <div class="table-circle" id="map-table-8"><div class="circle-ui">8</div></div>
-                    </div>
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-13"><div class="circle-ui">13</div></div>
-                        <div class="table-circle" id="map-table-14"><div class="circle-ui">14</div></div>
-                        <div class="table-circle" id="map-table-15"><div class="circle-ui">15</div></div>
-                        <div class="table-circle" id="map-table-16"><div class="circle-ui">16</div></div>
-                    </div>
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-21"><div class="circle-ui">21</div></div>
-                        <div class="table-circle" id="map-table-22"><div class="circle-ui">22</div></div>
-                        <div class="table-circle" id="map-table-23"><div class="circle-ui">23</div></div>
-                        <div class="table-circle" id="map-table-24"><div class="circle-ui">24</div></div>
+                <div>
+                    <div class="block-title">Горна Десна Страна</div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-5"><div class="circle-ui">5</div></div>
+                            <div class="table-circle" id="map-table-6"><div class="circle-ui">6</div></div>
+                            <div class="table-circle" id="map-table-7"><div class="circle-ui">7</div></div>
+                            <div class="table-circle" id="map-table-8"><div class="circle-ui">8</div></div>
+                        </div>
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-13"><div class="circle-ui">13</div></div>
+                            <div class="table-circle" id="map-table-14"><div class="circle-ui">14</div></div>
+                            <div class="table-circle" id="map-table-15"><div class="circle-ui">15</div></div>
+                            <div class="table-circle" id="map-table-16"><div class="circle-ui">16</div></div>
+                        </div>
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-21"><div class="circle-ui">21</div></div>
+                            <div class="table-circle" id="map-table-22"><div class="circle-ui">22</div></div>
+                            <div class="table-circle" id="map-table-23"><div class="circle-ui">23</div></div>
+                            <div class="table-circle" id="map-table-24"><div class="circle-ui">24</div></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -445,58 +484,64 @@
                 <div class="side-element">Кумска</div>
                 <div class="brand-center">
                     <div class="brand-logo">GRANDIS</div>
-                    <div class="brand-sub">Шема</div>
+                    <div class="brand-sub">Подиум</div>
                 </div>
-                <div class="side-element" style="writing-mode: vertical-lr;">Бина</div>
+                <div class="side-element">Бина</div>
             </div>
 
             <div class="hall-row">
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-музика"><div class="circle-ui">М</div><div class="special-label">Музика</div></div>
-                        <div class="table-circle" id="map-table-25"><div class="circle-ui">25</div></div>
-                        <div class="table-circle" id="map-table-26"><div class="circle-ui">26</div></div>
-                        <div class="table-circle" id="map-table-27"><div class="circle-ui">27</div></div>
-                    </div>
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-28"><div class="circle-ui">28</div></div>
-                        <div class="table-circle" id="map-table-29"><div class="circle-ui">29</div></div>
-                        <div class="table-circle" id="map-table-30"><div class="circle-ui">30</div></div>
-                        <div class="table-circle" id="map-table-31"><div class="circle-ui">31</div></div>
-                    </div>
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-32"><div class="circle-ui">32</div></div>
-                        <div class="table-circle" id="map-table-33"><div class="circle-ui">33</div></div>
-                        <div class="table-circle" id="map-table-34"><div class="circle-ui">34</div></div>
-                        <div class="table-circle" id="map-table-35"><div class="circle-ui">35</div></div>
+                <div>
+                    <div class="block-title">Долна Лева Страна</div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-музика"><div class="circle-ui">М</div><div class="special-label">Музика</div></div>
+                            <div class="table-circle" id="map-table-25"><div class="circle-ui">25</div></div>
+                            <div class="table-circle" id="map-table-26"><div class="circle-ui">26</div></div>
+                            <div class="table-circle" id="map-table-27"><div class="circle-ui">27</div></div>
+                        </div>
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-28"><div class="circle-ui">28</div></div>
+                            <div class="table-circle" id="map-table-29"><div class="circle-ui">29</div></div>
+                            <div class="table-circle" id="map-table-30"><div class="circle-ui">30</div></div>
+                            <div class="table-circle" id="map-table-31"><div class="circle-ui">31</div></div>
+                        </div>
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-32"><div class="circle-ui">32</div></div>
+                            <div class="table-circle" id="map-table-33"><div class="circle-ui">33</div></div>
+                            <div class="table-circle" id="map-table-34"><div class="circle-ui">34</div></div>
+                            <div class="table-circle" id="map-table-35"><div class="circle-ui">35</div></div>
+                        </div>
                     </div>
                 </div>
 
-                <div style="display:flex; align-items:flex-end; padding-bottom: 20px;">
+                <div class="entrance-container">
                     <div class="entrance-arrow">
                         <div class="arrow-icon">&uarr;</div>
-                        <div>ВЛЕЗ</div>
+                        <div>ГЛАВЕН ВЛЕЗ</div>
                     </div>
                 </div>
 
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-36"><div class="circle-ui">36</div></div>
-                        <div class="table-circle" id="map-table-37"><div class="circle-ui">37</div></div>
-                        <div class="table-circle" id="map-table-38"><div class="circle-ui">38</div></div>
-                        <div class="table-circle" id="map-table-торта"><div class="circle-ui">Т</div><div class="special-label">Торта</div></div>
-                    </div>
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-39"><div class="circle-ui">39</div></div>
-                        <div class="table-circle" id="map-table-40"><div class="circle-ui">40</div></div>
-                        <div class="table-circle" id="map-table-41"><div class="circle-ui">41</div></div>
-                        <div class="table-circle" id="map-table-42"><div class="circle-ui">42</div></div>
-                    </div>
-                    <div class="grid-block">
-                        <div class="table-circle" id="map-table-43"><div class="circle-ui">43</div></div>
-                        <div class="table-circle" id="map-table-44"><div class="circle-ui">44</div></div>
-                        <div class="table-circle" id="map-table-45"><div class="circle-ui">45</div></div>
-                        <div class="table-circle" id="map-table-46"><div class="circle-ui">46</div></div>
+                <div>
+                    <div class="block-title">Долна Десна Страна</div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-36"><div class="circle-ui">36</div></div>
+                            <div class="table-circle" id="map-table-37"><div class="circle-ui">37</div></div>
+                            <div class="table-circle" id="map-table-38"><div class="circle-ui">38</div></div>
+                            <div class="table-circle" id="map-table-торта"><div class="circle-ui">Т</div><div class="special-label">Торта</div></div>
+                        </div>
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-39"><div class="circle-ui">39</div></div>
+                            <div class="table-circle" id="map-table-40"><div class="circle-ui">40</div></div>
+                            <div class="table-circle" id="map-table-41"><div class="circle-ui">41</div></div>
+                            <div class="table-circle" id="map-table-42"><div class="circle-ui">42</div></div>
+                        </div>
+                        <div class="grid-block">
+                            <div class="table-circle" id="map-table-43"><div class="circle-ui">43</div></div>
+                            <div class="table-circle" id="map-table-44"><div class="circle-ui">44</div></div>
+                            <div class="table-circle" id="map-table-45"><div class="circle-ui">45</div></div>
+                            <div class="table-circle" id="map-table-46"><div class="circle-ui">46</div></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -537,9 +582,7 @@
             }
         }
 
-        function normalizeText(text) {
-            return text.toLowerCase().trim();
-        }
+        function normalizeText(text) { return text.toLowerCase().trim(); }
 
         function resetSearchField() {
             searchInput.value = '';
@@ -560,7 +603,8 @@
             const tableElement = document.getElementById(`map-table-${guest.table}`);
             if (tableElement) {
                 tableElement.classList.add('highlighted');
-                tableElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                // Мазно скролање на мобилниот до точно означената маса
+                tableElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
             }
             
             searchInput.value = '';
@@ -592,9 +636,7 @@
 
             for (let id in allGuests) {
                 const guest = allGuests[id];
-                if (normalizeText(guest.name).includes(query)) {
-                    currentMatches.push(guest);
-                }
+                if (normalizeText(guest.name).includes(query)) { currentMatches.push(guest); }
             }
 
             if(currentMatches.length > 0) {
@@ -603,9 +645,7 @@
                     const div = document.createElement('div');
                     div.classList.add('suggestion-item');
                     div.textContent = guest.name;
-                    div.addEventListener('click', () => {
-                        selectGuest(guest);
-                    });
+                    div.addEventListener('click', () => { selectGuest(guest); });
                     suggestionsContainer.appendChild(div);
                 });
             } else {
@@ -616,11 +656,8 @@
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 e.preventDefault();
-                if (currentMatches.length > 0) {
-                    selectGuest(currentMatches[0]);
-                } else if (searchInput.value.trim() !== '') {
-                    alert('Гостинот не е пронајден во распоредот.');
-                }
+                if (currentMatches.length > 0) { selectGuest(currentMatches[0]); }
+                else if (searchInput.value.trim() !== '') { alert('Гостинот не е пронајден во распоредот.'); }
             }
         });
 
@@ -636,10 +673,7 @@
             const alertDiv = document.getElementById('adminAlert');
             const rawText = listInput.value.trim();
 
-            if (!rawText) {
-                alert('Ве молиме внесете податоци во полето!');
-                return;
-            }
+            if (!rawText) { alert('Ве молиме внесете податоци во полето!'); return; }
 
             const lines = rawText.split('\n');
             const bulkData = {}; 
@@ -647,7 +681,6 @@
 
             for (let line of lines) {
                 if (!line.trim()) continue;
-
                 const lastCommaIndex = line.lastIndexOf(',');
                 if (lastCommaIndex === -1) continue;
 
@@ -661,10 +694,7 @@
                 }
             }
 
-            if (validGuestsCount === 0) {
-                alert('Не беше пронајден валиден формат кај ниту еден гост.');
-                return;
-            }
+            if (validGuestsCount === 0) { alert('Не беше пронајден валиден формат.'); return; }
 
             try {
                 const response = await fetch(firebaseUrl, {
@@ -685,9 +715,7 @@
                     await fetchGuests();
                     setTimeout(() => { alertDiv.style.display = 'none'; }, 4000);
                 }
-            } catch (error) {
-                alert("Имаше проблем при зачувување.");
-            }
+            } catch (error) { alert("Имаше проблем при зачувување."); }
         }
 
         async function clearDatabase() {
@@ -716,9 +744,7 @@
                     await fetchGuests();
                     setTimeout(() => { alertDiv.style.display = 'none'; }, 4000);
                 }
-            } catch (error) {
-                alert("Имаше проблем при бришење на базата.");
-            }
+            } catch (error) { alert("Имаше проблем при бришење на базата."); }
         }
 
         window.onload = fetchGuests;
