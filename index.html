@@ -579,7 +579,8 @@
             const tableElement = document.getElementById(`map-table-${guest.table}`);
             if (tableElement) {
                 tableElement.classList.add('highlighted');
-                tableElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+                // КЛУЧНА ПОПРАВКА: Скролање точно во средина (и хоризонтално и вертикално)
+                tableElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
             }
             
             searchInput.value = '';
