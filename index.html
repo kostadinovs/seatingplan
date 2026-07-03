@@ -39,6 +39,8 @@
             border: 1px solid rgba(255, 255, 255, 0.5);
             transition: all 0.3s ease;
             margin-bottom: 25px;
+            position: relative;
+            z-index: 9999;
         }
 
         @media (min-width: 768px) {
@@ -46,7 +48,7 @@
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 20px;
             color: #1a365d;
             font-weight: 700;
@@ -54,7 +56,7 @@
         }
 
         @media (min-width: 768px) {
-            h1 { font-size: 28px; margin-bottom: 25px; }
+            h1 { font-size: 34px; margin-bottom: 25px; }
         }
 
         h2 {
@@ -112,14 +114,13 @@
             top: calc(100% + 5px);
             left: 0;
             right: 0;
-            background: white;
+            background: #ffffff !important; 
             border-radius: 12px;
-            max-height: 240px;
-            overflow-y: auto;
-            z-index: 1000;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e2e8f0;
-            padding: 6px 0;
+            overflow: hidden;
+            z-index: 999999 !important; 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important; 
+            border: 1px solid #cbd5e0;
+            padding: 4px 0;
         }
 
         .suggestion-item {
@@ -128,38 +129,18 @@
             cursor: pointer;
             font-weight: 500;
             color: #4a5568;
+            background: #ffffff !important;
             transition: all 0.2s ease;
         }
 
         .suggestion-item:hover {
-            background-color: #ebf8ff;
+            background-color: #ebf8ff !important;
             color: #2b6cb0;
             padding-left: 25px;
         }
 
-        .result-card {
-            margin-top: 25px;
-            padding: 25px 15px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
-            border: 1px solid #81e6d9;
-            display: none;
-            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 8px 20px rgba(134, 239, 172, 0.2);
-        }
-
-        .result-card h3 {
-            font-size: 20px;
-            color: #0b6353;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .result-card p { font-size: 15px; color: #1d4ed8; font-weight: 500; }
-        .table-number { font-size: 58px; font-weight: 800; color: #2b6cb0; margin-top: 5px; }
-
         /* Админ Секција */
-        .admin-section { width: 100%; max-width: 650px; margin-top: 30px; }
+        .admin-section { width: 100%; max-width: 650px; margin-top: 30px; position: relative; z-index: 1; }
         .instructions {
             font-size: 13px;
             color: #718096;
@@ -183,7 +164,7 @@
         .alert { margin-top: 15px; padding: 12px; border-radius: 8px; font-size: 14px; background-color: #c6f6d5; color: #22543d; display: none; font-weight: 600; }
         .alert-danger { background-color: #fed7d7; color: #742a2a; }
 
-        /* --- НАПРЕДЕН И ЦЕЛОСНО RESPONSIVE ПЛАН НА САЛАТА --- */
+        /* ПЛАН НА САЛАТА */
         .map-section {
             width: 100%;
             max-width: 850px;
@@ -192,11 +173,12 @@
             border-radius: 24px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.08);
             border: 1px solid #e2e8f0;
+            position: relative;
+            z-index: 5;
         }
 
         @media (min-width: 768px) { .map-section { padding: 40px 25px; } }
 
-        /* Мобилна легенда за блокови */
         .map-legend {
             display: block;
             background: #f7fafc;
@@ -213,21 +195,18 @@
 
         @media (min-width: 768px) { .map-legend { display: none; } }
 
-        /* Главен контејнер на распоредот */
         .hall-layout {
             display: flex;
             flex-direction: column;
             gap: 25px;
         }
 
-        /* На мобилен, редовите се кршат вертикално во убави секции */
         .hall-row {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        /* На компјутер (десктоп) се враќа оригиналниот Grandis изглед рамо до рамо */
         @media (min-width: 768px) {
             .hall-row {
                 flex-direction: row;
@@ -247,7 +226,6 @@
         }
         @media (min-width: 768px) { .block-title { display: none; } }
 
-        /* Решетка со маси */
         .grid-block {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -266,7 +244,6 @@
             }
         }
 
-        /* Средниот дел (Кумска, Лого, Бина) */
         .center-row {
             display: flex;
             flex-direction: row;
@@ -325,7 +302,6 @@
             .brand-sub { font-size: 14px; letter-spacing: 2px; }
         }
 
-        /* Дизајн на Масите - КРУГОВИ */
         .table-circle {
             display: flex;
             flex-direction: column;
@@ -363,7 +339,6 @@
             text-transform: uppercase;
         }
 
-        /* КЛУЧНА ПРОМЕНА: Респонзивен контејнер за Влезот */
         .entrance-container {
             display: flex;
             justify-content: center;
@@ -372,7 +347,6 @@
             background: #ebf8ff;
             border-radius: 12px;
             border: 1px solid #bee5eb;
-            /* На мобилен, овој елемент ќе се префрли најдоле преку флекс order */
             order: 99; 
         }
         @media (min-width: 768px) {
@@ -382,7 +356,7 @@
                 align-items: flex-end; 
                 padding-bottom: 20px; 
                 border: none;
-                order: unset; /* Ресетирај го редоследот за десктоп */
+                order: unset;
             }
         }
 
@@ -390,7 +364,6 @@
         @media (min-width: 768px) { .entrance-arrow { color: #4a5568; } }
         .arrow-icon { font-size: 20px; line-height: 1; }
 
-        /* АНИМАЦИЈА И ЕФЕКТ НА СЕЛЕКТИРАНА МАСА */
         .table-circle.highlighted .circle-ui {
             background: #d69e2e;
             border-color: #b7791f;
@@ -421,12 +394,6 @@
             <input type="text" id="guestSearch" placeholder="Внеси име и презиме..." autocomplete="off">
             <button id="clearSearchX" class="clear-search-btn" onclick="resetSearchField()">&times;</button>
             <div id="suggestions" class="suggestions" style="display: none;"></div>
-        </div>
-
-        <div id="resultCard" class="result-card">
-            <h3 id="guestNameResult"></h3>
-            <p>Ве очекуваме на маса број:</p>
-            <div class="table-number" id="tableNumber">--</div>
         </div>
     </div>
 
@@ -607,10 +574,6 @@
         }
 
         function selectGuest(guest) {
-            guestNameResult.textContent = guest.name;
-            tableNumber.textContent = guest.table;
-            resultCard.style.display = 'block';
-            
             document.querySelectorAll('.table-circle').forEach(el => el.classList.remove('highlighted'));
             
             const tableElement = document.getElementById(`map-table-${guest.table}`);
@@ -629,9 +592,6 @@
         const searchInput = document.getElementById('guestSearch');
         const suggestionsContainer = document.getElementById('suggestions');
         const clearSearchX = document.getElementById('clearSearchX');
-        const resultCard = document.getElementById('resultCard');
-        const guestNameResult = document.getElementById('guestNameResult');
-        const tableNumber = document.getElementById('tableNumber');
 
         searchInput.addEventListener('input', () => {
             const query = normalizeText(searchInput.value);
@@ -720,7 +680,6 @@
                     alertDiv.textContent = `Успешно додадовте ${validGuestsCount} гости!`;
                     alertDiv.style.display = 'block';
                     listInput.value = ''; 
-                    resultCard.style.display = 'none';
                     document.querySelectorAll('.table-circle').forEach(el => el.classList.remove('highlighted'));
                     resetSearchField();
 
@@ -749,7 +708,6 @@
                     alertDiv.style.display = 'block';
                     
                     document.getElementById('guestListInput').value = '';
-                    resultCard.style.display = 'none';
                     document.querySelectorAll('.table-circle').forEach(el => el.classList.remove('highlighted'));
                     resetSearchField();
 
